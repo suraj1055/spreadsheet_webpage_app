@@ -1,0 +1,60 @@
+/* Container for the tabs */
+.tabs-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid #BFBFBF;
+    background-color: #F3F3F3;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual tab style */
+.tab {
+    position: relative; /* Allow absolute positioning of the pseudo-element */
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #BFBFBF;
+    border-bottom: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333333;
+    border-radius: 5px 5px 0 0;
+    font-family: Arial, sans-serif;
+    /* Add an extra clickable area */
+}
+
+/* Invisible area for clicking */
+.tab::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Adjust the area to be clickable above the tab */
+    left: -10px; /* Adjust the area to be clickable on the left of the tab */
+    right: -10px; /* Adjust the area to be clickable on the right of the tab */
+    bottom: -10px; /* Adjust the area to be clickable below the tab */
+    background: transparent;
+    z-index: -1; /* Ensure it's behind the visible content */
+}
+
+/* Active tab style */
+.tab.active {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    font-weight: bold;
+    color: #1D3A6A;
+}
+
+/* Hover effect */
+.tab:hover {
+    background-color: #E5E5E5;
+}
+
+/* Tab container to mimic Excel's sheet background */
+.tabs-content-container {
+    border: 1px solid #BFBFBF;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 0 5px 5px 5px;
+}

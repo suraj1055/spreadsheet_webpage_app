@@ -1,0 +1,9 @@
+.spreadsheet-container {
+    width: 200vw;  /* Full viewport width */
+    height: 200vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
